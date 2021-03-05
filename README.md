@@ -35,3 +35,9 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Outputs: `P0_1_cufflinks/genes.fpkm_tracking`
 * Counts how reads map to genomic regions defined by an annotation
 * Cufflinks parameters are `--compatible-hits-norm` 
+
+## run_cuffdiff.qsub
+* Dependencies: cufflinks
+* Execution: `qsub rub_cuffdiff.qsub`
+* Inputs: `P0_1_tophat/accepted_hits.bam`
+* Identifies differentially expressed genes
