@@ -6,6 +6,11 @@
 #$ -pe mpi_16_tasks_per_node 16
 #$ -l h_rt=48:00:00
 
+#####################################################################
+# Programmer: Elysha Sameth                                         #
+# Identifies differentially expressed genes in P0 and adult samples #
+#####################################################################
+
 source /etc/bashrc
 module load cufflinks
 

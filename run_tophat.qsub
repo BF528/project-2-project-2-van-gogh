@@ -5,6 +5,15 @@
 #$ -j y
 #$ -pe mpi_16_tasks_per_node 16
 
+##################################################################
+# Programmer: Elysha Sameth					 #    
+# Align the sequenced paired-end reads from the P0 sample to the #
+# mouse reference genome called mm9 (supplied) using TopHat      #
+#								 #
+# Arguments were taken from the paper and formatted by           #
+# /project/bf528/project_2/scripts/tophat_args.txt		 #
+##################################################################
+
 echo "Running job $JOB_ID"
 echo "Started: $(date +%F)"
 echo "Running in directory: $PWD"

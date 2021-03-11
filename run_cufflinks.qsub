@@ -5,6 +5,15 @@
 #$ -j y
 #$ -pe mpi_16_tasks_per_node 16
 
+##################################################################
+# Programmer: Elysha Sameth                                      #
+# Counts how reads map to genomic regions defined by an          #
+# annotation using cufflinks.					 #
+#                                                                #
+# Arguments were taken from the paper and formatted by           #
+# /project/bf528/project_2/scripts/cufflinks_args.txt            #
+##################################################################
+
 echo "Running job $JOB_ID"
 echo "Started: $(date +%F)"
 echo "Running in directory: $PWD"

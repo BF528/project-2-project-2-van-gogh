@@ -5,6 +5,16 @@
 #$ -j y
 #$ -pe mpi_16_tasks_per_node 16
 
+##################################################################
+# Programmer: Elysha Sameth                                      #
+# Script to run all of the quality control metrics from the      #
+# RseQC package: genebody_coverage.py, inner_distance.py, and    #
+# bam_stat.py                                                    #
+#								 #
+# Outputs are a plot of the gene coverage, insert size, and a    #
+# summary of the mapping statistics of the BAM file		 #
+##################################################################
+
 echo "Running job $JOB_ID"
 echo "Started: $(date +%F)"
 echo "Running in directory: $PWD"
