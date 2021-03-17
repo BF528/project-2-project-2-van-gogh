@@ -12,6 +12,20 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Biologist: Monil Gandhi (@gandhimonil9823)
 
 # Repository Contents
+## Data Curator
+### run_extract.qsub
+* Dependencies: java, sratoolkit
+* Execution: 'qsub run_extract.qsub'
+* Outputs: p0_1_2.fastq, p0_1_2.fastq
+* Extracts two fastq files from the .sra file 
+* sratoolkit parameters are 'fastq-dump -I --split-files P0_1.sra -O /projectnb/bf528/users/van-gogh/project_2/data/'
+
+### fastqc command
+* Dependencies: java, fastqc
+* Execution: 'fastqc P0_1_1.fastq P0_1_2.fastq -o /projectnb/bf528/users/van-gogh/project_2/data'
+* Outputs: P0_1_1_fastqc.html, P0_1_2_fastqc.html 
+* Performs quality assessment on the two .fastq input files to output two html files containing tables and images of quality metrics.
+
 ## Programmer
 ### run_tophat.qsub
 * Dependencies: python2, samtools-0.1.19, bowtie2, boost, tophat
