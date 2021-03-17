@@ -42,8 +42,8 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Inputs: `P0_1_tophat/accepted_hits.bam`
 * Identifies differentially expressed genes
 
-### Analyst
-## analyst.r
+## Analyst
+### analyst.r
 * Dependencies: r
 * Inputs: `gene_exp.diff`
 * Outputs: `Log2 Fold Change for All Genes`: Histogram of log2 fold-change for all genes
@@ -51,12 +51,12 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * `up_reg_genes.csv`: List of genes that are up-regulated 
 * `down_reg_genes.csv`: List of genes that are down-regulated 
 
-## ontology.r
+### ontology.r
 * Dependencies: r
 * Inputs: GO analysis results
 * Outputs: `ontology_table.csv`: Contain information about Top 3 enrichment clusters' top 5 GO terms, # of genes cluster for the term, symbol of the cluster for up-regulated genes. And Top 4 enrichment clusters' top 5 GO terms, # of genes cluster for the term, symbol of the cluster for for down regulated genes.
 
-## GO_barplot.r
+### GO_barplot.r
 * Dependencies: r
 * Outputs: `up.png`: Barplot summarizing the GO analysis for up-regulated genes
 * `down.png`: Barplot summarizing the GO analysis for down-regulated genes
