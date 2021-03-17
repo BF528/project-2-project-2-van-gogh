@@ -6,7 +6,7 @@ In reproducing the study we downloaded and analyzed P0 sequencing data, aligned 
 O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammalian Cardiac Regeneration. Circ Res. Feb 2015. PMID: 25477501
 
 # Contributors
-* Data Curator: Andrew Gjelsteen (@agjeleste)
+* Data Curator: Andrew Gjelsteen (@agjelste)
 * Programmer: Elysha Sameth (@esameth)
 * Analyst: Lindsay Wang (@LindsayW007)
 * Biologist: Monil Gandhi (@gandhimonil9823)
