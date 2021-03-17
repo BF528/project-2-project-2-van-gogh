@@ -20,7 +20,7 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Aligns the reads to the mouse genome reference called mm9
 * TopHat parameters are `-r 200`, `-G`, `--segment-length=20`, `--segment-mismatches=1`, `--no-novel-juncs`
 
-## run_rseqc.qsub
+### run_rseqc.qsub
 * Dependencies: python3, samtools, rseqc
 * Execution: `qsub run_rseqc.qsub`
 * Outputs: quality control metric in `bam_stat.txt`, plots of mRNA distribution and gene coverage
@@ -28,7 +28,7 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * `inner_distance.py`: Calculate the inner distance (insert size)  of RNA-seq fragments
 * `bam_stat.py`: Summarizing mapping statistics of a BAM or SAM file 
 
-## run_cufflinks.qsub
+### run_cufflinks.qsub
 * Dependencies: cufflinks
 * Execution: `qsub run_cufflinks.qsub` 
 * Inputs: `P0_1_tophat/accepted_hits.bam`
@@ -36,11 +36,11 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Counts how reads map to genomic regions defined by an annotation
 * Cufflinks parameters are `--compatible-hits-norm` 
 
-## run_cuffdiff.qsub
+### run_cuffdiff.qsub
 * Dependencies: cufflinks
 * Execution: `qsub rub_cuffdiff.qsub`
 * Inputs: `P0_1_tophat/accepted_hits.bam`
-* Identifies differentially expressed genes
+* Identifies differentially expressed genes between P0 and Ad
 
 ## Analyst
 ### analyst.r
