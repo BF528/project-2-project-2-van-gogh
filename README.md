@@ -16,15 +16,15 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 ### run_extract.qsub
 * Dependencies: sratoolkit
 * Execution: `qsub run_extract.qsub`
-* Outputs: two fastq files
-* Extracts two fastq files from sra file
-* sratoolkit parameters are `fastq-dump -I --split-files <sra_file.sra> -O <output_directory>`
+* Outputs: `p0_1_2.fastq`, `p0_1_2.fastq`
+* Extracts two fastq files from .sra file
+* sratoolkit parameters are `fastq-dump -I --split-files P0_1.sra -O <directory path>`
 
 ### fastqc command
 * Dependencies: java, fastqc
-* Execution: `fastqc <file1.fastq> <file2.fastq> -o <output_directory>`
-* Outputs: two html files
-* Performs quality assessment on the two fastq input files to output two html files containing tables and images of quality metrics.
+* Execution: `fastqc P0_1_1.fastq P0_1_2.fastq -o <directory path>`
+* Outputs: `P0_1_1_fastqc.html`, `P0_1_2_fastqc.html`
+* Performs quality assessment on the two .fastq input files to output two html files containing tables and images of quality metrics.
 
 ## Programmer
 ### run_tophat.qsub
@@ -74,3 +74,17 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Dependencies: r
 * Outputs: `up.png`: Barplot summarizing the GO analysis for up-regulated genes
 * `down.png`: Barplot summarizing the GO analysis for down-regulated genes
+
+
+## Biologist
+### FPKMplot.R
+* Dependencies: r
+* Inputs: File genes.fpkm_tracking for phases P0, P4, P7, Ad 
+* Outputs: Line plots for Sacromere, Mitochondria and Cell Cycle - "Cell_Cycle_Sample_1.png", "Cell_Cycle_Sample_2", "Mitochondria_Sample_1.png",               
+                                                                    "Mitochondria_Sample_2", "Sarcomere_Sample_1.png", "Sarcomere_Sample_2.png"
+                                                                    
+### headmap.R
+* Dependencies: r
+* Inputs: gene_exp.diff, down_reg_gene_output.csv, up_reg_gene_output.csv, down_reference_research_paper.csv, up_reference_research_paper.csv
+* Outputs: heatMap.png, down_regulated_GO_clusters.csv, up_regulated_GO_clusters.csv
+
