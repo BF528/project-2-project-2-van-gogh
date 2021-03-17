@@ -18,11 +18,11 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 * Execution: `qsub run_extract.qsub`
 * Outputs: two fastq files
 * Extracts two fastq files from sra file
-* sratoolkit parameters are `fastq-dump -I --split-files <sra_file.sra> -O <output_directory_path>`
+* sratoolkit parameters are `fastq-dump -I --split-files <sra_file.sra> -O <output_directory>`
 
 ### fastqc command
 * Dependencies: java, fastqc
-* Execution: `fastqc <file1.fastq> <file2.fastq> -o <output_directory_path>`
+* Execution: `fastqc <file1.fastq> <file2.fastq> -o <output_directory>`
 * Outputs: two html files
 * Performs quality assessment on the two fastq input files to output two html files containing tables and images of quality metrics.
 
