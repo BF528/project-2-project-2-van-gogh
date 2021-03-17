@@ -79,12 +79,12 @@ O’Meara et al. Transcriptional Reversion of Cardiac Myocyte Fate During Mammal
 ## Biologist
 ### FPKMplot.R
 * Dependencies: r
-* Inputs: File genes.fpkm_tracking for phases P0, P4, P7, Ad 
-* Outputs: Line plots for Sacromere, Mitochondria and Cell Cycle - "Cell_Cycle_Sample_1.png", "Cell_Cycle_Sample_2", "Mitochondria_Sample_1.png",               
-                                                                    "Mitochondria_Sample_2", "Sarcomere_Sample_1.png", "Sarcomere_Sample_2.png"
+* Inputs: File `genes.fpkm_tracking` for phases P0, P4, P7, Ad 
+* Outputs: Line plots for Sacromere, Mitochondria and Cell Cycle - `Cell_Cycle_Sample_1.png`, `Cell_Cycle_Sample_2`, `Mitochondria_Sample_1.png`,               
+                                                                    `Mitochondria_Sample_2`, `Sarcomere_Sample_1.png`, `Sarcomere_Sample_2.png`
                                                                     
 ### headmap.R
 * Dependencies: r
-* Inputs: gene_exp.diff, down_reg_gene_output.csv, up_reg_gene_output.csv, down_reference_research_paper.csv, up_reference_research_paper.csv
-* Outputs: heatMap.png, down_regulated_GO_clusters.csv, up_regulated_GO_clusters.csv
+* Inputs: `gene_exp.diff`, `down_reg_gene_output.csv`, `up_reg_gene_output.csv`, `down_reference_research_paper.csv`, `up_reference_research_paper.csv`
+* Outputs: `heatMap.png`, `down_regulated_GO_clusters.csv`, `up_regulated_GO_clusters.csv`
 
