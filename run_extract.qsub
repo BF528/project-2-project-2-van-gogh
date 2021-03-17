@@ -1,0 +1,23 @@
+#!/bin/bash -l
+# This script takes a short read archive format file and extracts two FASTQ files from it
+# 2 files because pair-end reads
+
+#$ -P bf528
+#$ -cwd
+#$ -j y
+#$ -pe mpi_16_tasks_per_node 16
+#$ -o run_extract.stdout
+#$ -e run_extract.stderr
+
+echo "Runing job $JOB_ID"
+echo "Started: $(date +%F)"
+echo "Running in directory: $PWD"
+
+# my commands go here:
+
+module load fastqc
+module load sratoolkit
+
+fastq-dump -I --split-files P0_1.sra -O /projectnb/bf528/users/van-gogh/project_2/data/
+
+echo "Job finished: $(date+%F)"
